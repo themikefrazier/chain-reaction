@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chain Reaction - Build Your Momentum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1>Chain Reaction</h1>
+            <p class="tagline">How long can you maintain momentum?</p>
+        </header>
+
+        <!-- Game Stats -->
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="stat-label">Score</span>
+                <span class="stat-value" id="score">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Chain Length</span>
+                <span class="stat-value" id="chain-length">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Time Left</span>
+                <span class="stat-value" id="time-left">5:00</span>
+            </div>
+        </div>
+
+        <!-- Chain Visual -->
+        <div class="chain-container">
+            <div class="chain-links" id="chain-links">
+                <!-- Chain links will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area">
+            <!-- Start Screen -->
+            <div class="screen" id="start-screen">
+                <h2>Ready to Build Your Chain?</h2>
+                <p>Complete tasks quickly to maintain momentum.</p>
+                <p>The longer your chain, the harder it gets.</p>
+                <p class="emphasis">Break the chain, start over.</p>
+                <button class="btn-primary" id="start-btn">Start Game</button>
+            </div>
+
+            <!-- Task Screen -->
+            <div class="screen hidden" id="task-screen">
+                <div class="task-timer">
+                    <div class="timer-bar" id="timer-bar"></div>
+                    <span class="timer-text" id="timer-text">8.0s</span>
+                </div>
+                
+                <div class="task-content" id="task-content">
+                    <!-- Task content loads here -->
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div class="screen hidden" id="gameover-screen">
+                <h2>Chain Broken</h2>
+                <div class="final-stats">
+                    <div class="final-stat">
+                        <span class="final-label">Final Score</span>
+                        <span class="final-value" id="final-score">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="final-label">Longest Chain</span>
+                        <span class="final-value" id="final-chain">0</span>
+                    </div>
+                    <div class="final-stat">
+                        <span class="final-label">Time Survived</span>
+                        <span class="final-value" id="time-survived">0:00</span>
+                    </div>
+                </div>
+                <button class="btn-primary" id="restart-btn">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Built to develop psychological maturity • Proceeds support childhood capacity programs</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
